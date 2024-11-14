@@ -33,6 +33,9 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -44,7 +47,7 @@
     <section class="jumbotron text-center">
       <img src="img/foto.JPG" alt="Maestro Marcellino Amadeo" width="150" class="rounded-circle img-thumbnail" />
       <h1 class="display-6">Maestro Marcellino Amadeo</h1>
-      <p class="lead">IT and Robotics Trainer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -124,7 +127,7 @@
       </svg>
     </section>
 
-    <!-- Gallery -->
+    <!-- Gallery --> 
     <section id="gallery">
       <div class="container">
         <div class="row justify-content-center text-center mb-4">
@@ -229,6 +232,21 @@
       });
     </script>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+   gsap.registerPlugin(TextPlugin)
+   gsap.to('.lead', {duration: 1.5, delay: 3, text: 'IT and Robotics Trainer'})
+   gsap.from('.img-thumbnail', {duration: 1, rotateY: 360, opacity: 0});
+   gsap.from('.navbar', {duration: 1, y: '-100%', opacity: 0, ease: 'bounce'});
+   gsap.from('.display-6', {duration: 1, x: -50, opacity: 0, delay: 1.5, ease: 'back'});
+  });
+ 
+ </script>
+      
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbzp-GgqP7rJODNdwn4LgQ3yfN5HvWdIAwnMZ0K2wsFnVAM5xJT-eh_X_QtEpM4LDXvr/exec";
       const form = document.forms["submit-to-google-sheet"];

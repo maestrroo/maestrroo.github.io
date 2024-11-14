@@ -23,3 +23,8 @@ section {
 #gallery .row > * {
   padding: 0;
 }
+
+.display-6 {
+  font-weight: 350;
+  color: red;
+}
